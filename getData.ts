@@ -30,7 +30,7 @@ const getData = new Promise(async function (resolve, reject) {
         headers: headers,
         data: graphqlQuery
       });
-      if (response.data.data.votes && i <= 20) { // check if there is data
+      if (response.data.data.votes) { // check if there is data
         data.push(response.data.data.votes);
         i += 10;
       }
